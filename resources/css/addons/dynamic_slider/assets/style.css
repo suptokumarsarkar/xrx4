@@ -1,0 +1,352 @@
+.settings_pannel.controller {
+    width: 400px;
+    background: #f7f7f7;
+    box-shadow: 1px 0px 2px 1px #20202011;
+    height: 100vh;
+    position: relative;
+}
+
+.dark .settings_pannel.controller {
+    background: #111111;
+    color: #ddd;
+    box-shadow: 1px 0px 2px 1px #dddddd11;
+}
+.bottom_bar .settings_pannel{
+    position: fixed;
+    height: 70px !important;
+    bottom: 0px;
+}
+.bottom_bar .active_panel{
+    width: 100% !important;
+}
+.v_title {
+    font-size: 15px;
+    padding: 5px
+}
+
+.panel_settings.flex {
+    justify-content: space-between;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    align-items: baseline;
+}
+
+.dark .panel_settings.flex {
+    background: #212121;
+    border-bottom: 1px solid #292929;
+}
+
+.panel_settings.flex img {
+    width: 17px;
+    transition: .4s;
+}
+
+.dark .panel_settings.flex img {
+    filter: invert(80%);
+}
+
+.panel_settings.flex button {
+    padding: 5px 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.panel_settings.flex button:hover {
+    background: #ddd;
+}
+
+.panel_settings.flex button:hover img {
+    filter: opacity(.7);
+}
+
+#minimize_click img {
+    width: 14px;
+}
+
+.panel .panel_head {
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+}
+
+.dark .panel .panel_head {
+    border-bottom: 1px solid #444;
+}
+
+.panel .panel_head .panel_title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.settings img {
+    width: 20px;
+}
+
+.dark .settings img {
+    filter: invert(100%);
+}
+
+.settings.default button {
+    display: flex block;
+    justify-content: left;
+    gap: 20px;
+    padding: 5px 3px;
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+}
+
+.dark .settings button {
+    color: #ccc;
+    border-bottom: 1px solid #313131;
+}
+
+.settings.default button:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: 8px solid #313131AA;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    right: 10px;
+}
+
+.pannel_bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.pannel_bottom.flex button img {
+    width: 20px;
+}
+
+.pannel_bottom.flex {
+    background: #ddd;
+    justify-content: right;
+    width: 100%;
+    gap: 10px;
+}
+
+.dark .pannel_bottom.flex {
+    background: #313131
+}
+
+.pannel_bottom.flex button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    color: #313131;
+    font-size: 11px;
+}
+
+.content-composer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+
+}
+
+.dark .content-composer {
+    border-bottom: 1px solid #313131;
+}
+
+.content-composer label:not(.generation-z label) {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-content: baseline;
+    font-size: 13px;
+    color: #313131;
+}
+
+.dark .content-composer label:not(.generation-z label) {
+    color: #ddd;
+}
+
+.content-composer .inputs {
+    width: 60%;
+    margin: 5px 0px;
+}
+
+.content-composer .generation-z .inputs {
+    width: 100%;
+    margin: 5px 0px;
+    text-align: right;
+}
+
+.input {
+    width: calc(100% - 2px);
+    border: 1px solid #888;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input[type=color] {
+    width: 50px;
+    height: 20px;
+}
+
+.dark .input {
+    background: #353535;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px;
+    padding-right: 0px;
+    padding-top: 1px;
+}
+
+.generation-z {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.generation-z label span {
+    color: #353535;
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+.dark .generation-z label span {
+    color: #ddd;
+}
+
+.panel_head #back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    text-align: left;
+}
+
+.pannel_button {
+    background: none;
+    border: none !important;
+    cursor: pointer;
+    width: 50%;
+    text-align: left;
+}
+
+.pannel_resizer {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #ccc;
+    cursor: e-resize;
+}
+
+.panel {
+    overflow-y: auto;
+    height: calc(100% - 89px);
+}
+
+.dark .pannel_resizer {
+    background: #212121;
+}
+
+.items h3.name_t,
+.ps5 h3.name_t {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.items .b,
+.ps5 .b {
+    width: 40px;
+}
+
+.items .c,
+.ps5 .c {
+    width: 100%;
+}
+
+.items p,
+.ps5 p {
+    font-size: 12px;
+}
+
+.dark .pannel_button.highlight {
+    background: #16ee2470;
+    padding: 7px 16px;
+    border-radius: 5px;
+}
+
+.empty {
+    color: #888;
+    width: 100%;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.parts {
+    width: 100%;
+    border-bottom: 1px solid #c0c0c0;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.dark .parts {
+    border-bottom: 1px solid #313131;
+}
+
+.ps5 {
+    cursor: pointer;
+}
+
+.pannel_button.highlight {
+    background: #00ac0b;
+    padding: 7px 16px;
+    border-radius: 5px;
+    color: #eee;
+    font-size: 12px;
+}
+
+.composer.tips {
+    text-align: center;
+    padding: 2%;
+}
+
+.composer.tips h2 {
+    font-size: 15px;
+    color: orange;
+}
+
+.composer.tips p {
+    font-size: 12px;
+    color: green;
+}
+.active{
+    background: #ccc !important;
+    color: black !important;
+}
+.inset_hover .active{
+    background: transparent !important;
+    color: unset !important;
+}
+.inset_hover .active span{
+    background: black !important;
+    border: 1px solid #ccc !important;
+}
+.panel_documentation {
+    width: 100%;
+    background: #f5f5f5;
+}

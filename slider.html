@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Modal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        #slider,
+        #slider2 {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            font-size: 20px;
+            /* Adjust based on your slide height */
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            display: none;
+            /* Hide all slides initially */
+        }
+
+
+        .slide.active {
+            display: block;
+            /* Show only the active slide */
+        }
+
+    </style>
+    <link href="http://22softwares.com/resources/css/addons/dynamic_slider/assets/style.css?232573934"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://22softwares.com/resources/js/slider.js"></script>
+    <script>
+        $(document).ready(function() {
+            var slider = $('#slider').sliderPlugin({
+                "pagination": true,
+                "navigation": true,
+                "navigationStyle": "text",
+                "RightText": "Next",
+                "leftText": "Previous",
+                "RightIcon": "            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <polyline points=\"9 18 15 12 9 6\"/>\n            </svg>\n        ",
+                "LeftIcon": "            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <polyline points=\"15 18 9 12 15 6\"/>\n            </svg>\n        ",
+                "paginationStyle": "titles_flex",
+                "paginationOutlet": "outset",
+                "mouseDrag": true,
+                "dragCursor": "grabbing",
+                "autoSlide": true,
+                "loop": true,
+                "autoSlideTime": "5000",
+                "animation": "slide",
+                "animationTime": "500",
+                "stopSlideOnHover": true
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="modal-content">
+    <div id="slider" style="user-select: none;">
+        <div class="slides" style="transition: transform 0.5s; transform: translateX(0%); cursor: default;">
+            <div class="slide " style="display: block; background: rgb(52, 101, 164) url(&quot;http://22softwares.com/public/storage/uploads/1731593479_Dart.png&quot;) 0% 0% / 10%;" slidername="Master Slide">
+                <div class="slider_container_single"><h2 class="single_heading " data-connected="single" data-connected-id="0" data-component="0" style="font-family: Arial; font-style: normal; font-size: 40px; color: #8ae234; text-align: center; text-transform: none; line-height: 400px; font-weight: ; text-shadow: 1px 0px 0px red; ">Master Slide</h2></div>
+            </div>
+
+            <div class="slide " style="display: block; background: rgb(85, 87, 83) url(&quot;http://22softwares.com/public/storage/uploads/1731593571_id-card.png&quot;);" slidername="KG slide">
+                <div class="slider_container_single"><h2 class="single_heading " data-connected="single" data-connected-id="1" data-component="0" style="font-family: Arial; font-style: normal; font-size: 40px; color: #f57900; text-align: center; text-transform: none; line-height: 400px; font-weight: ; text-shadow: 1px 0px 0px red; ">This is something to get into touch</h2></div>
+            </div>
+
+            <div class="slide " style="display: block; height: 400px; background: rgb(136, 138, 133) url(&quot;http://22softwares.com/public/storage/uploads/1731593637_padding.png&quot;);" slidername="Slide 3">
+                <div class="slider_container_single"><p class="single_paragraph " data-connected="single" data-connected-id="2" data-component="1" style="font-family: cursive; font-style: italic; font-size: 50px; color: #cc0000; text-align: left; text-transform: none; line-height: 100px; font-weight: ; margin-top: 10px; margin-left: 50px; text-shadow: 0px 0px 0px red; ">Something is better than everying</p></div>
+            </div>
+        </div>
+        <div class="pagination" style="display: flex; justify-content: center; margin: 0px;"><span data-index="0" class="active" style="width: 33.3333%; padding: 10px 3px; text-align: center; background: rgb(51, 51, 51); cursor: pointer; user-select: none; color: rgb(221, 221, 221);"><div class="title-flex">Master Slide</div></span><span data-index="1" style="width: 33.3333%; padding: 10px 3px; text-align: center; background: rgb(51, 51, 51); cursor: pointer; user-select: none; color: rgb(221, 221, 221);"><div class="title-flex">KG slide</div></span><span data-index="2" style="width: 33.3333%; padding: 10px 3px; text-align: center; background: rgb(51, 51, 51); cursor: pointer; user-select: none; color: rgb(221, 221, 221);" class=""><div class="title-flex">Slide 3</div></span></div>
+        <button class="prev22" style="display: block; position: absolute; top: 50%; transform: translateY(-50%); background-color: rgb(255, 255, 255); border: 1px solid rgb(221, 221, 221); padding: 10px; cursor: pointer; user-select: none; left: 10px;">Previous</button>
+        <button class="next22" style="display: block; position: absolute; top: 50%; transform: translateY(-50%); background-color: rgb(255, 255, 255); border: 1px solid rgb(221, 221, 221); padding: 10px; cursor: pointer; user-select: none; right: 10px;">Next</button>
+    </div>
+</div>
+</body>
+</html>
+
+'[{"sliderName":"Slide 1","itemType":"single","itemId":0,"styles":{"backgroundColor":"#3465a4","marginTop":"","marginBottom":"","marginLeft":"","marginRight":"","marginUnit":"%","paddingTop":"","paddingBottom":"","paddingLeft":"","paddingRight":"","paddingUnit":"%","width":"","widthUnit":"%","height":"","heightUnit":"%","backgroundFile":{"0":{"jQuery371054949398087583061":{"events":{"change":[{"type":"change","origType":"change","data":null,"guid":22,"namespace":""},{"type":"change","origType":"change","guid":35,"namespace":""}],"keyup":[{"type":"keyup","origType":"keyup","guid":35,"namespace":""}]}}},"length":1},"backgroundImage":"http://22softwares.com/public/storage/uploads/1731600803_database.png","backgroundLinearGradientDegree":"","backgroundLinearGradientColors":"","backgroundRadialGradientType":"","backgroundRadialGradientColors":"","backgroundSize":"","backgroundSizeUnit":"%","backgroundPositionTop":"","backgroundPositionLeft":"","backgroundPositionUnit":"%","borderRadius":"","borderRadiusUnit":"%","backgroundRepeat":null,"backdropFilterType":"","backgropFIlterValue":""},"backgroundType":"image","additionalClass":"","components":{"single":[{"type":"heading","id":0,"name":"HEADING","content":"<h2 class=\\"single_heading \\" data-connected=\\"single\\" data-connected-id=\\"0\\" data-component=\\"0\\" style=\\"font-family: Arial; font-style: normal; font-size: 40px; color: #000000; text-align: center; text-transform: none; line-height: 400px; font-weight: ; text-shadow: 1px 0px 0px red; \\">SImple one</h2>"}]}}]'
+

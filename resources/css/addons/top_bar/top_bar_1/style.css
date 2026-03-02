@@ -1,0 +1,116 @@
+.top_bar_1 {
+    background:#212121;
+    padding: 5px;
+}
+.quick_connect a {
+    color: #ccc;
+    text-decoration: none;
+    text-align: left;
+    margin-right: 10px;
+    transition: .5s;
+}
+.quick_connect a:hover {
+    text-decoration: underline;
+    color: white;
+}
+.quick_connect a i {
+    font-size: 20px;
+}
+.quick_connect a p {
+    font-size: 12px;
+    margin-left: 7px;
+}
+.quick_connect a p span {
+    color: #c3d3c3;
+}
+.short_links .link a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 13px;
+    display: inline-block;
+    transition: .4s;
+    margin-left: 5px;
+}
+.short_links .link a:hover {
+    color: white;
+}
+.short_links .link a.active {
+    background: #f08700;
+    color: #201e1e;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+.short_links .link a.active:hover{
+    background: #f98f31;
+}
+.languages .languages_dropdown{
+    position: absolute;
+    background: white;
+    width: 200px;
+    box-shadow: 1px 3px 5px 0px #ccc;
+    margin-top: 10px;
+    display: none;
+    z-index: 3;
+    margin-left: -124px;
+}
+.languages .languages_dropdown button {
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 7px;
+    text-align: left;
+    cursor: pointer;
+    transition: .4s;
+}
+.languages .languages_dropdown button:hover {
+    background: #efefef;
+}
+.active_lang {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.languages .lang{
+    margin-right: 5px;
+}
+.languages .no-style {
+    display: block;
+    background: transparent;
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    width: 73px;
+}
+
+@media(max-width:826px){
+    .short_links .link a {
+        font-size: 10px;
+    }
+    .short_links .link a {
+        font-size: 9px;
+    }
+    .quick_connect a p{
+        font-size: 9px;
+    }
+}
+@media(max-width:826px){
+    .short_links .link a {
+        font-size: 10px;
+    }
+    .quick_connect a p{
+        font-size: 9px;
+    }
+}
+@media(max-width:682px){
+    .short_links .link a {
+        font-size: 10px;
+    }
+    .quick_connect{
+        display: none;
+    }
+    .active_lang button {
+        font-size: 12px;
+    }
+}

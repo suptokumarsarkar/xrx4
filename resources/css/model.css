@@ -1,0 +1,255 @@
+.notification_bar {
+    position: fixed;
+    z-index: 10;
+}
+
+.notification_bar .notification_data .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.notification_data .message {
+    padding: 5px;
+    font-size: 13px;
+}
+
+.notification_bar .actions button {
+    padding: 0px 5px;
+    background: none;
+    border: 1px solid #666;
+    color: #666;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notification_bar .notification_data {
+    background: white;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 1px 1px 2px 1px #ccc;
+    cursor: pointer;
+}
+
+.notification_bar .notification_data.type_S {
+    background: #d4edda;
+    color: green;
+}
+
+.notification_bar .notification_data.type_E {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.notification_data.type_E .actions button {
+    background: green;
+    color: white;
+    border-color: green;
+    transition: .4s;
+}
+
+.notification_data.type_S .actions button {
+    background: green;
+    color: white;
+    border-color: green;
+    transition: .4s;
+}
+
+.notification_bar .notification_data.type_N {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.notification_data.type_N .actions button {
+    background: green;
+    color: white;
+    border-color: green;
+    transition: .4s;
+}
+
+.notification_bar .notification_data.type_W {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.notification_data.type_W .actions button {
+    background: #444826;
+    color: white;
+    border-color: green;
+    transition: .4s;
+}
+
+.notification_bar .notification_data.border {
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.notification_bar.right {
+    right: 5px;
+}
+
+.notification_bar.left {
+    left: 5px;
+}
+
+.notification_bar.center {
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.notification_bar.top {
+    top: 5px;
+}
+
+.notification_bar.bottom {
+    bottom: 5px;
+}
+
+.notification_bar.middle {
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.notification_data .actions button:hover {
+    background: red;
+    border-color: red;
+    color: white;
+}
+.animate-left {
+    animation: animate-left .4s;
+}
+@keyframes animate-left{
+    0%{
+        margin-left: -50px;
+    }
+}
+.animate-right {
+    animation: animate-right .4s;
+}
+@keyframes animate-right{
+    0%{
+        margin-right: -50px;
+    }
+}
+.animate-top {
+    animation: animate-top .4s;
+}
+@keyframes animate-top{
+    0%{
+        margin-top: -50px;
+    }
+}
+.animate-bottom {
+    animation: animate-bottom .4s;
+}
+@keyframes animate-bottom{
+    0%{
+        margin-top: 50px;
+    }
+}
+
+.animate-scale {
+    animation: animate-scale .4s;
+}
+@keyframes animate-scale{
+    0%{
+        transform: scale(0.5);
+    }
+}
+.animate-spin {
+    animation: animate-spin .4s;
+}
+@keyframes animate-spin{
+    0%{
+        rotate: 90deg;
+    }
+}
+.animate-rotate {
+    animation: animate-rotate .4s;
+}
+@keyframes animate-rotate{
+    0%{
+        transform: rotateY(90deg);
+    }
+}
+.typeWritter:after{
+    content: "|";
+    color: #444;
+    animation: animate-fade .6s ease-in-out infinite;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    margin-top: -1px;
+}
+.animate-fade {
+    animation: animate-top .4s;
+}
+@keyframes animate-fade{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes blink {
+    0% {
+      opacity:1
+    }
+    50% {
+      opacity:0
+    }
+    100% {
+      opacity:1
+    }
+  }
+  @keyframes cp-round-animate {
+    0% {
+      transform:rotate(0)
+    }
+    100% {
+      transform:rotate(360deg)
+    }
+  }
+  @-webkit-keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform:translateZ(600px);
+      transform:translateZ(600px);
+      opacity:0
+    }
+    100% {
+      -webkit-transform:translateZ(0);
+      transform:translateZ(0);
+      opacity:1
+    }
+  }
+  @keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform:translateZ(600px);
+      transform:translateZ(600px);
+      opacity:0
+    }
+    100% {
+      -webkit-transform:translateZ(0);
+      transform:translateZ(0);
+      opacity:1
+    }
+  }
+  @keyframes ripple {
+    from {
+      opacity:1;
+      transform:scale3d(.75,.75,1)
+    }
+    to {
+      opacity:0;
+      transform:scale3d(1.5,1.5,1)
+    }
+  }
+  @keyframes counterUp {
+    from {
+      transform:translateY(0)
+    }
+    to {
+      transform:translateY(-144px)
+    }
+  }

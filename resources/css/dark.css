@@ -1,0 +1,219 @@
+.dark {
+    background: #000;
+}
+
+.dark .bar {
+    color: #eee;
+}
+
+.dark .header_1 .logo h2 {
+    color: #a0cf2a;
+}
+
+.dark .header_1 {
+    background: #111111;
+    box-shadow: 0px 1px 1px 0.01px #313131;
+}
+
+.dark #main_nav ul li a {
+    color: #eee;
+}
+
+.dark .dropdown-v {
+    background: #111111;
+}
+
+.dark .better_idea .texts h3 {
+    color: #ddd;
+}
+
+.dark .better_idea .texts p {
+    color: #ccc;
+}
+
+.dark .about_services p {
+    color: #ccc;
+}
+
+.dark .why_services_block_line .line {
+    color: #ccc;
+}
+
+.dark .languages .languages_dropdown {
+    background: #333;
+    box-shadow: 1px 2px 2px 1px #202020;
+}
+
+.dark .languages .languages_dropdown button {
+    color: #ddd;
+}
+
+.dark .languages .languages_dropdown button:hover {
+    background: #555;
+}
+
+.dark .front_page .ai_points .points {
+    color: white;
+    background: linear-gradient(#303030AA, #404040AA, #000000AA);
+    text-shadow: 1px 0px 1px #222;
+}
+
+.dark .front_page .ai_points .points i {
+    color: lightgreen;
+}
+
+.dark .front_page .f_texts h2 {
+    color: #ddd
+}
+
+.dark .front_page .f_texts p {
+    color: #ccc
+}
+
+.dark .top_brands {
+    color: #ddd;
+}
+
+.dark .demand_texts .sticky {
+    color: #ddd;
+}
+
+.dark .on_demand .demand_items .items .d-i {
+    background: #313131;
+    color: #ddd;
+}
+
+.dark .on_demand .demand_items .items .d-i:hover {
+    color: lightgreen;
+    background: linear-gradient(-90deg, #90ee90ad, #313131, #313131, #313131);
+    background-size: 300%;
+    background-position: -85% -10%;
+}
+
+.dark .demand_texts .mw .pos {
+    background: #212121;
+    color: #ddd;
+}
+
+.dark .invite_learn .l_texts h2 {
+    color: #ddd;
+}
+
+.dark .invite_learn .l_texts p {
+    color: #ccc;
+}
+
+.dark .invite_learn .l_populars h2 {
+    color: #ddd;
+}
+
+.dark .details .sum {
+    background: #212121;
+}
+
+.dark .details .sum .questions button {
+    color: #ddd;
+}
+
+.dark .details .sum .questions {
+    color: #ddd;
+}
+
+.dark .details .sum .ans {
+    color: #ccc;
+}
+
+.dark .invite_learn .l_populars .items {
+    background: #333;
+}
+
+.dark .invite_learn .l_populars .items a {
+    color: #ddd;
+}
+
+.dark .target_business .texts h2 {
+    color: #ddd;
+}
+
+.dark .target_business .texts p {
+    color: #ccc;
+}
+
+.dark .main_footer {
+    background: linear-gradient(#050505, #333)
+}
+
+.dark .address {
+    color: #ccc;
+}
+
+.dark .target_business .image_effect img {
+    filter: invert(92%);
+}
+
+.dark .main_footer .menu ul li a {
+    color: #ddd;
+}
+
+.dark .ico_bar {
+    background: #212121;
+}
+
+.dark .top_brands .brand_images img {
+    filter: invert(20%);
+}
+
+.dark .invert {
+    filter: invert(100%);
+}
+
+.dark .back_v {
+    background: #414141;
+    box-shadow: 1px 1px 2px 1px #202020;
+}
+
+.dark .back_v button.back-p {
+    color: white;
+}
+
+.dark #main_nav ul li a.drop-out i {
+    color: white;
+}
+
+.dark .bottom_v {
+    background: #353535;
+}
+
+.dark .bottom_v a.visit_store {
+    color: #ddd;
+}
+
+.dark .back_v .title-v {
+    color: #ddd;
+}
+
+@media(max-width:1336px) {
+    .dark .mid {
+        background: #313131;
+    }
+}
+
+@media (max-width: 1042px) {
+    .dark .target_business .texts h2 {
+        color: #ddd;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    .dark .target_business .texts p {
+        color: #ddd;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    .dark .target_business {
+        background-size: cover;
+    }
+
+    .dark .target_business .wrapper {
+        background: linear-gradient(90deg, #222A, #333A, #444A);
+    }
+}

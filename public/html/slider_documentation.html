@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Plugin Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <style>
+        .slider-doc-container {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slider-doc-container h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .slider-doc-container h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .slider-doc-container p {
+            margin-bottom: 15px;
+        }
+
+        .slider-doc-container pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .slider-doc-container code {
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+
+        .slider-doc-container .copy-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .slider-doc-container ul {
+            padding-left: 20px;
+        }
+
+        .slider-doc-container table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .slider-doc-container th, .slider-doc-container td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .slider-doc-container th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .slider-doc-container .note {
+            background-color: #fff9c4;
+            border-left: 4px solid #ffeb3b;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="slider-doc-container">
+    <h1>Slider Plugin Documentation</h1>
+
+    <p>The Slider Plugin is a jQuery-based image slider that provides a customizable and feature-rich solution for creating responsive slideshows on web pages.</p>
+
+    <h2>Installation</h2>
+    <p>Include jQuery and the slider.js file in your HTML:</p>
+    <pre><code class="language-html">&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/slider.js"&gt;&lt;/script&gt;</code><button class="copy-btn">Copy</button></pre>
+
+    <h2>Basic Usage</h2>
+    <p>To create a basic slider, use the following HTML structure:</p>
+    <pre><code class="language-html">&lt;div id="slider"&gt;
+    &lt;div class="slides"&gt;
+        &lt;div class="slide"&gt;
+            &lt;img src="image1.jpg" alt="Slide 1"&gt;
+        &lt;/div&gt;
+        &lt;div class="slide"&gt;
+            &lt;img src="image2.jpg" alt="Slide 2"&gt;
+        &lt;/div&gt;
+        &lt;div class="slide"&gt;
+            &lt;img src="image3.jpg" alt="Slide 3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="pagination"&gt;&lt;/div&gt;
+    &lt;button class="prev22"&gt;Previous&lt;/button&gt;
+    &lt;button class="next22"&gt;Next&lt;/button&gt;
+&lt;/div&gt;</code><button class="copy-btn">Copy</button></pre>
+
+    <p>Initialize the slider with jQuery:</p>
+    <pre><code class="language-javascript">$('#slider').sliderPlugin();</code><button class="copy-btn">Copy</button></pre>
+
+    <h2>Advanced Usage</h2>
+    <p>You can customize the slider with various options:</p>
+    <pre><code class="language-javascript">$('#slider').sliderPlugin({
+    pagination: true,
+    navigation: true,
+    navigationStyle: 'icon',
+    paginationStyle: 'dots',
+    mouseDrag: true,
+    autoSlide: true,
+    loop: true,
+    autoSlideTime: 3000,
+    animation: 'fade',
+    animationTime: 500,
+    stopSlideOnHover: true
+});</code><button class="copy-btn">Copy</button></pre>
+
+    <h2>Options</h2>
+    <table> <tr> <th>Option</th> <th>Type</th> <th>Default</th> <th>Description</th> </tr> <tr> <td>pagination</td> <td>boolean</td> <td>true</td> <td>Enable/disable pagination</td> </tr> <tr> <td>navigation</td> <td>boolean</td> <td>true</td> <td>Enable/disable navigation buttons</td> </tr> <tr> <td>mouseDrag</td> <td>boolean</td> <td>true</td> <td>Enable/disable mouse drag functionality</td> </tr> <tr> <td>dragCursor</td> <td>string</td> <td>'grabbing'</td> <td>Custom cursor style during drag</td> </tr> <tr> <td>autoSlide</td> <td>boolean</td> <td>false</td> <td>Enable/disable auto sliding</td> </tr> <tr> <td>loop</td> <td>boolean</td> <td>false</td> <td>Enable/disable infinite loop</td> </tr> <tr> <td>autoSlideTime</td> <td>number</td> <td>1000</td> <td>Time interval for auto sliding (in milliseconds)</td> </tr> <tr> <td>animation</td> <td>string</td> <td>'slide'</td> <td>Animation type (slide, fade, zoom, flip, bounce, rotate, scale, blur, slide-up, slide-down)</td> </tr> <tr> <td>animationTime</td> <td>number</td> <td>1000</td> <td>Duration of animation (in milliseconds)</td> </tr> <tr> <td>navigationStyle</td> <td>string</td> <td>'text'</td> <td>Style of navigation buttons (text, icon, text_w_b, icon_w_b, icon_f_s_h, text_f_s_h, icon_text_h, icon_text)</td> </tr> <tr> <td>leftText</td> <td>string</td> <td>"Previous"</td> <td>Text for the left (previous) navigation button</td> </tr> <tr> <td>RightText</td> <td>string</td> <td>"Next"</td> <td>Text for the right (next) navigation button</td> </tr> <tr> <td>LeftIcon</td> <td>string</td> <td>SVG code</td> <td>SVG icon for the left navigation button</td> </tr> <tr> <td>RightIcon</td> <td>string</td> <td>SVG code</td> <td>SVG icon for the right navigation button</td> </tr> <tr> <td>paginationStyle</td> <td>string</td> <td>'number'</td> <td>Style of pagination (number, dots, squire_dots, titles, titles_flex)</td> </tr> <tr> <td>stopSlideOnHover</td> <td>boolean</td> <td>false</td> <td>Pause auto-sliding when hovering over the slider</td> </tr> <tr> <td>paginationOutlet</td> <td>string</td> <td>'outset'</td> <td>Position of pagination (inset, outset)</td> </tr> </table>
+
+    <h2>Methods</h2>
+    <p>The plugin returns an object with the following methods:</p>
+    <pre><code class="language-javascript">var slider = $('#slider').sliderPlugin();
+
+// Go to a specific slide
+slider.goToSlide(2);
+
+// Start auto sliding
+slider.startAutoSlide();
+
+// Destroy the slider
+slider.destroy();
+
+// Recreate the slider
+slider.recreate();</code><button class="copy-btn">Copy</button></pre>
+
+    <h2>Custom Slider Examples</h2>
+
+    <h3>1. Full-width Slider with Custom Navigation</h3>
+    <pre><code class="language-html">&lt;div id="full-width-slider" style="width: 100%;"&gt;
+    &lt;div class="slides"&gt;
+        &lt;div class="slide" style="background-image: url('image1.jpg'); background-size: cover; height: 400px;"&gt;&lt;/div&gt;
+        &lt;div class="slide" style="background-image: url('image2.jpg'); background-size: cover; height: 400px;"&gt;&lt;/div&gt;
+        &lt;div class="slide" style="background-image: url('image3.jpg'); background-size: cover; height: 400px;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="pagination"&gt;&lt;/div&gt;
+    &lt;button class="prev22"&gt;&lt;i class="fas fa-chevron-left"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class="next22"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code><button class="copy-btn">Copy</button></pre>
+
+    <pre><code class="language-javascript">$('#full-width-slider').sliderPlugin({
+    navigationStyle: 'icon',
+    paginationStyle: 'dots',
+    autoSlide: true,
+    loop: true,
+    animation: 'fade'
+});</code><button class="copy-btn">Copy</button></pre>
+
+    <h3>2. Content Slider with Titles</h3>
+    <pre><code class="language-html">&lt;div id="content-slider"&gt;
+    &lt;div class="slides"&gt;
+        &lt;div class="slide" sliderName="Slide 1"&gt;
+            &lt;h2&gt;Slide 1 Title&lt;/h2&gt;
+            &lt;p&gt;Content for slide 1&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="slide" sliderName="Slide 2"&gt;
+            &lt;h2&gt;Slide 2 Title&lt;/h2&gt;
+            &lt;p&gt;Content for slide 2&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="slide" sliderName="Slide 3"&gt;
+            &lt;h2&gt;Slide 3 Title&lt;/h2&gt;
+            &lt;p&gt;Content for slide 3&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="pagination"&gt;&lt;/div&gt;
+&lt;/div&gt;</code><button class="copy-btn">Copy</button></pre>
+
+    <pre><code class="language-javascript">$('#content-slider').sliderPlugin({
+    navigation: false,
+    paginationStyle: 'titles',
+    mouseDrag: true,
+    animation: 'slide'
+});</code><button class="copy-btn">Copy</button></pre>
+
+    <h2>Custom Updates</h2>
+    <p>You can update the slider's options after initialization:</p>
+    <pre><code class="language-javascript">var slider = $('#slider').sliderPlugin();
+
+// Change animation type
+slider.recreate({
+    animation: 'zoom'
+});
+
+// Enable auto sliding
+slider.recreate({
+    autoSlide: true,
+    autoSlideTime: 5000
+});
+
+// Change navigation style
+slider.recreate({
+    navigationStyle: 'icon_text'
+});</code><button class="copy-btn">Copy</button></pre>
+
+    <div class="note">
+        <strong>Note:</strong> This plugin is released under the MIT License.
+    </div>
+</div>
+
+<script>
+    hljs.highlightAll();
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const code = btn.previousElementSibling.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    });
+</script>
+</body>
+</html>
